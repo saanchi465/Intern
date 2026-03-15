@@ -9,7 +9,7 @@ import seaborn as sns
 @st.cache_data
 def load_data():
     try:
-        with zipfile.ZipFile("Movies.csv") as z:
+        with zipfile.ZipFile("IMDb Movies India.csv.zip") as z:
             with z.open(z.namelist()[0]) as f:
                 df = pd.read_csv(f, encoding="latin1")
         
